@@ -1,21 +1,16 @@
-# cat mycaplet.cap
+# arp-mon.cap
 
-# Show the BetterCAP Web UI in the browser:
+# Ignore the most common noisy events:
+events.ignore endpoint.new
+events.ignore endpoint.lost
+events.ignore net.sniff.mdns
+#events.ignore sys.log
+events.ignore net.recon.up
+events.ignore net.recon.down
+
 ui on
-
-# Disable verbose packet sniffing logs:
-set net.sniff.verbose false
-
-# Enable the network recon module:
 net.recon on
-
-# Instruct ARP spoofing to attempt to restore normal ARP tables 
-# when we stop ARP spoofing or exit BetterCAP:
 set arp.spoof.restore true
-
-# Enable ARP spoofing:
 arp.spoof on
 
-# Start packet sniffing:
-net.sniff on
 

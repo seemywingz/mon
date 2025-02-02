@@ -75,7 +75,6 @@ function reset_mac() {
 
     echo "  Reset MAC: $(get_mac)"
 }
-
 # Ensure we reset MAC if the script is interrupted
 trap reset_mac EXIT
 
@@ -105,7 +104,7 @@ sudo sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"
 change_mac
 enable_iface
 
-# (Optional) Start Bettercap
+# Start Bettercap
 sudo bettercap --iface "$iFace" --caplet ../caplets/arp-mon.cap
 
 # Wait for user to press Enter

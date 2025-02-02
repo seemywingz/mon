@@ -1,6 +1,6 @@
 #!/bin/bash
 
-iFace="eth0" # Change to your actual interface if necessary (e.g., "wlan0")
+iFace="wlan0" # Change to your actual interface if necessary (e.g., "wlan0")
 
 ##
 # Check and install dependencies only if they are missing

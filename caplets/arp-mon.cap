@@ -1,7 +1,7 @@
 # arp-mon.cap
 
 # Turn the UI on 
-ui on
+# ui on
 
 # Enable network recon and sniffing
 net.recon on

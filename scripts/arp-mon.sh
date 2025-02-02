@@ -106,7 +106,7 @@ change_mac
 enable_iface
 
 # (Optional) Start Bettercap
-# sudo bettercap --iface "$iFace" --caplet ../caplets/arp-mon.cap
+sudo bettercap --iface "$iFace" --caplet ../caplets/arp-mon.cap
 
 # Wait for user to press Enter
 echo

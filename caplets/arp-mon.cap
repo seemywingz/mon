@@ -3,14 +3,13 @@
 # Turn the UI on 
 # ui on
 
-# Enable network recon and sniffing
-net.recon on
-net.probe on
-net.sniff on
-
 # Enable ARP spoofing and ensure restoration
 set arp.spoof.restore true
 arp.spoof on
+
+# Sniff Packets
+net.probe on
+net.sniff on
 
 # Ignore the most common noisy events:
 events.ignore endpoint.new
